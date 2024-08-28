@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/styles.css">
+    <title>Mi Aplicación CRUD</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1><img src="./img/logo.png" alt="Mi Logotipo"> Mi Aplicación CRUD</h1>
+
+            <!-- Formulario para agregar nuevos datos -->
+            <form id="crud-form">
+                <input type="text" id="name" placeholder="Nombre">
+                <input type="text" id="description" placeholder="Descripción">
+                <button type="submit">Agregar</button>
+            </form>
+        </div>
+            <!-- Tabla para mostrar los datos -->
+            <div class="expanded-info">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Las filas de datos se agregarán dinámicamente con JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Ventana modal -->
+        <div class="modal">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript para manejar las operaciones CRUD y la ventana modal -->
+    <script src="./Js/scripts.js"></script>
+</body>
+</html>
