@@ -11,9 +11,17 @@ form.addEventListener('submit', (e) => {
     const nameInput = document.getElementById('name');
     const descriptionInput = document.getElementById('description');
 
+    const newName = nameInput.value.trim(); // Elimina espacios en blanco al principio y al final
+    const newDescription = descriptionInput.value.trim();
+
+    if (newName === '' || newDescription === '') {
+        alert('Por favor, completa todos los campos antes de guardar.');
+        return; // No guarda datos vacíos
+    }
+
     const newData = {
-        name: nameInput.value,
-        description: descriptionInput.value,
+        name: newName,
+        description: newDescription,
     };
 
     data.push(newData);
